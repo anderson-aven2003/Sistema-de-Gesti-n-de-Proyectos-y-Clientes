@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #f4f6f8;
+    --color-nav: #1f2937;
+    --color-aside: #e5e7eb;
+    --color-main: #ffffff;
+    --color-card: #f9fafb;
+
+    --color-text-light: #ffffff;
+    --color-text-dark: #111827;
+    --color-accent: #3b82f6;
+
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+}
+
+
+#parent-container {
+    display: grid;
+    grid-template-columns: 200px 220px 1fr;
+    height: 100vh;
+}
+
+
+nav {
+    background-color: var(--color-nav);
+    color: var(--color-text-light);
+    padding: 20px;
+}
+
+nav h1 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+#list-ul {
+    list-style: none;
+}
+
+.list-li {
+    margin-bottom: 15px;
+}
+
+.list-li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.list-li a:hover {
+    color: var(--color-accent);
+}
+
+
+aside {
+    background-color: var(--color-aside);
+    padding: 20px;
+}
+
+#title-aside {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.paragraph-aside {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+
+main {
+    background-color: var(--color-main);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    overflow: hidden;
+}
+
+#title-main {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    flex: 1;
+    min-height: 0;
+}
+
+.title-section {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+#caja-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 10px;
+}
+
+
+.project-card {
+    min-width: 250px;
+    height: 200px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    border-radius: 8px;
+    border: 1px solid var(--color-nav);
+    background-color: var(--color-aside);
+}
+
+.project-title,
+.project-description {
+    text-align: center;
+}
+
+
+#caja-card::-webkit-scrollbar {
+    height: 3px;
+}
+
+#caja-card::-webkit-scrollbar-thumb {
+        background-color: var(--color-nav);
+            /* mismo color que el nav */
+            border-radius: 6px;
+}
+
+#caja-card::-webkit-scrollbar-track {
+    background: transparent;
+}
