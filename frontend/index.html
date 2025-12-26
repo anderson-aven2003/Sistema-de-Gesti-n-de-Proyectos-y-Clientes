@@ -11,48 +11,77 @@
 <body>
     <div id="parent-container">
         <nav>
-            <h1>logo</h1>
-            <ul id="list-ul">
-                <li class="list-li"><a href="#">Dashboard</a></li>
-                <li class="list-li"><a href="#">clientes</a></li>
-                <li class="list-li"><a href="#">proyectos</a></li>
-            </ul>
+            <div class="caja-list">
+                <h1 class="logo">GestorPro</h1>
+                <ul id="list-ul">
+                    <li class="list-li"><a href="#" class="active">Dashboard</a></li>
+                    <li class="list-li"><a href="#">Clientes</a></li>
+                    <li class="list-li"><a href="#">Proyectos</a></li>
+                    <li class="list-li"><a href="#">Tareas</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <a href="#">Configuraciones</a>
+                <a href="#">Cerras sesion</a>
+            </div>
         </nav>
         <aside>
             <h1 id="title-aside">resumen</h1>
-            <p class="paragraph-aside">proyectos activos, 3</p>
-            <p class="paragraph-aside">tareas pendientes, 5</p>
+
+            <div class="aside-card">
+                <p>proyectos activos</p>
+                <strong>3</strong>
+            </div>
+
+            <div class="aside-card">
+                <p>tareas pendientes</p>
+                <strong>12</strong>
+            </div>
+
+            <div class="aside-card alert">
+                <p>entregas proximas</p>
+                <strong>2</strong>
+            </div>
+
+            <div class="aside-progress">
+                <p>progreso mensual</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%"></div>
+                </div>
+                <span>65%</span>
+            </div>
         </aside>
         <main>
             <h2 id="title-main">Dashboard</h2>
             <section>
-                <h3 class="title-section">proyectos recientes</h3>
+                <h3 class="title-section">Destacados</h3>
                 <div id="caja-card">
                     <div class="project-card">
-                        <h4 class="project-title">Proyecto 1</h4>
-                        <p class="project-description">Descripción del proyecto 1</p>
+                        <h4 class="project-title">Personas <span>activas</span></h4>
+                        <img id="img-user" src="./icons/user.svg" alt="#">
+                        <p class="project-description"><span>1.2M</span> de personas activas</p>
                     </div>
                     <div class="project-card">
-                        <h4 class="project-title">Proyecto 2</h4>
-                        <p class="project-description">Descripción del proyecto 2</p>
+                        <h4 class="project-title">Proyectos concluidos</h4>
+                        <img id="img-project" src="./icons/briefcase.svg" alt="#">
+                        <p class="project-description"><span>2M</span> de proyectos concluidos</p>
                     </div>
                     <div class="project-card">
-                        <h4 class="project-title">Proyecto 3</h4>
-                        <p class="project-description">Descripción del proyecto 3</p>
+                        <h4 class="project-title">Proyectos destacados</h4>
+                        <img id="img-destacados" src="./icons/heart.svg" alt="#">
+                        <p class="project-description"><span>1: coca cola</span></p>
                     </div>
                     <div class="project-card">
-                        <h4 class="project-title">Proyecto 4</h4>
-                        <p class="project-description">Descripción del proyecto 4</p>
-                </div>
+                        <h4 class="project-title">Tareas pendientes</h4>
+                        <img id="img-tarea-p" src="./icons/check.svg" alt="#">
+                        <p class="project-description"><span>12</span> Tareas por completar</p>
+                    </div>
                     <div class="project-card">
-                        <h4 class="project-title">Proyecto 5</h4>
-                        <p class="project-description">Descripción del proyecto 5</p>
+                        <h4 class="project-title">Proxima entrega</h4>
+                        <img id="img-entrega" src="./icons/clock.svg" alt="#">
+                        <p class="project-description"><span>24 sep</span> proyecto: coca cola</p>
+                    </div>
                 </div>
-                    <div class="project-card">
-                        <h4 class="project-title">Proyecto 6</h4>
-                        <p class="project-description">Descripción del proyecto 6</p>
-                </div>
-
             </section>
         </main>
     </div>

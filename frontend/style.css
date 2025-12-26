@@ -33,9 +33,13 @@ body {
 
 
 nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--color-nav);
     color: var(--color-text-light);
     padding: 20px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.35);
 }
 
 nav h1 {
@@ -59,12 +63,36 @@ nav h1 {
 
 .list-li a:hover {
     color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.list-li a.active {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-footer a{
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-footer a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 
 aside {
     background-color: var(--color-aside);
     padding: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
 }
 
 #title-aside {
@@ -75,6 +103,36 @@ aside {
 .paragraph-aside {
     margin-bottom: 10px;
     font-size: 0.95rem;
+}
+
+.aside-card {
+    background: var(--color-main);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.aside-card strong {
+    font-size: 1.4rem;
+    color: var(--color-accent);
+}
+
+.alert strong {
+    color: #ef4444;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #d1d5db;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-accent);
 }
 
 
@@ -91,8 +149,9 @@ main {
 
 #title-main {
     margin-bottom: 20px;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
+    color: var(--color-text-dark);
 }
 
 
@@ -109,7 +168,7 @@ section {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: underline var(--color-accent);
 }
 
 
@@ -120,8 +179,7 @@ section {
 
     overflow-x: auto;
     overflow-y: hidden;
-
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 
@@ -134,15 +192,38 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    transition: all 0.3s ease;
 
     border-radius: 8px;
     border: 1px solid var(--color-nav);
     background-color: var(--color-aside);
 }
 
+.project-card:hover {
+    box-shadow: 0 4px 8px var(--color-shadow);
+    transform: translateY(-5px) scale(1.03);
+}
+
+.project-card img {
+    width: 50px;
+    height: 50px;
+}
+
 .project-title,
 .project-description {
     text-align: center;
+}
+
+.project-title span {
+    color: var(--color-accent);
+}
+
+.project-description span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-accent);
 }
 
 
@@ -151,11 +232,12 @@ section {
 }
 
 #caja-card::-webkit-scrollbar-thumb {
-        background-color: var(--color-nav);
-            /* mismo color que el nav */
-            border-radius: 6px;
+    background-color: var(--color-nav);
+    /* mismo color que el nav */
+    border-radius: 6px;
 }
 
 #caja-card::-webkit-scrollbar-track {
     background: transparent;
 }
+
