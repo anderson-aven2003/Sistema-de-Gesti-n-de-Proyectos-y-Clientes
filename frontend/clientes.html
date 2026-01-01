@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #f4f6f8;
+            --color-nav: #1f2937;
+            --color-aside: #e5e7eb;
+            --color-main: #ffffff;
+            --color-card: #f9fafb;
+
+            --color-text-light: #ffffff;
+            --color-text-dark: #111827;
+            --color-accent: #3b82f6;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: var(--color-main);
+        }
+
+        .table-container {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-family: Arial, sans-serif;
+        }
+
+        .title-table {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--color-text-dark);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px var(--color-shadow);
+        }
+
+        td,
+        th {
+            border: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        .project-description {
+            font-weight: bold;
+        }
+
+        .project-description a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .cajita-color {
+            width: 100%;
+            height: 10px;
+        }
+
+        .activos {
+            background-color: rgb(94, 255, 129);
+        }
+
+        .pausados {
+            background-color: rgb(255, 230, 91);
+        }
+
+        .inactivos {
+            background-color: rgb(255, 102, 102);
+        }
+
+        .concluidos {
+            background-color: rgb(102, 255, 218);
+        }
+
+        #caja-agregar {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+        }
+
+        #caja-agregar button {
+            color: var(--color-text-dark);
+            border: 1px solid var(--color-nav);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #caja-agregar button:hover {
+            background-color: var(--color-accent);
+        }
+
+        #caja-agregar button img {
+            width: 15px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container">
+        <h1 class="title-table">Clientes</h1>
+        <div id="caja-table">
+            <div id="caja-agregar"><button> <img src="./icons/plus.svg" alt="icono de mas"> Agregar cliente</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellido</th>
+                        <th>Correo electronico</th>
+                        <th>Numero telefonico</th>
+                        <th>Estado</th>
+                        <th>Empresa</th>
+                        <th>Proyecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Anderson avendaño</td>
+                        <td>anderson.007@gmail.com</td>
+                        <td>+502 5152-5665</td>
+                        <td>ACTIVO <div class="cajita-color activos"></div>
+                        </td>
+                        <td>Google</td>
+                        <td class="project-description">Un sistema de inventario automatico. archivo: <a
+                                href="#">InvenPro</a></td>
+                    </tr>
+                    <tr>
+                        <td>Melisa fuentes</td>
+                        <td>melii33@gmail.com</td>
+                        <td>+502 4458-9596</td>
+                        <td>PAUSADO <div class="cajita-color pausados"></div>
+                        </td>
+                        <td>Microsoft</td>
+                        <td class="project-description">Un sistema de reconocimiento facial para marcado de entrada de
+                            los
+                            trabajadores. archivo: <a href="#">FaceSoft</a></td>
+                    </tr>
+                    <tr>
+                        <td>Marvin soto</td>
+                        <td>marvin.soto00@gmail.com</td>
+                        <td>+502 2123-9595</td>
+                        <td>CONCLUIDO <div class="cajita-color concluidos"></div>
+                        </td>
+                        <td>Tesla</td>
+                        <td class="project-description">Es un sistema de automatizacion para sus vehiculos. archivo: <a
+                                href="#">TeslaBot</a></td>
+                    </tr>
+                    <tr>
+                        <td>Alejandra ramos</td>
+                        <td>Aleja.123@gmail.com</td>
+                        <td>+502 4565-5500</td>
+                        <td>INACTIVO <div class="cajita-color inactivos"></div>
+                        </td>
+                        <td>Amazon</td>
+                        <td class="project-description">Es un sistema de organizacion de envios automatico. archivo: <a
+                                href="#">amazonDelivery</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
