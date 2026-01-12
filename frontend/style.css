@@ -183,7 +183,7 @@ section {
 }
 
 
-.project-card {
+.Dashboard-card {
     min-width: 250px;
     height: 200px;
 
@@ -201,26 +201,26 @@ section {
     background-color: var(--color-aside);
 }
 
-.project-card:hover {
+.Dashboard-card:hover {
     box-shadow: 0 4px 8px var(--color-shadow);
     transform: translateY(-5px) scale(1.03);
 }
 
-.project-card img {
+.Dashboard-card img {
     width: 50px;
     height: 50px;
 }
 
-.project-title,
-.project-description {
+.Dashboard-title,
+.Dashboard-description {
     text-align: center;
 }
 
-.project-title span {
+.Dashboard-title span {
     color: var(--color-accent);
 }
 
-.project-description span {
+.Dashboard-description span {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--color-accent);

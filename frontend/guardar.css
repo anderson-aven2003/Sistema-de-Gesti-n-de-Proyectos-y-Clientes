@@ -1,0 +1,271 @@
+        .project-cards {
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            gap: 20px;
+            padding: 50px 20px 50px 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card {
+            width: 280px;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px var(--color-shadow);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--color-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow:
+                0 0 0 1px var(--color-nav),
+                0 0 20px rgba(59, 130, 246, 0.4),
+                0 0 40px rgba(59, 130, 246, 0.2);
+            transform: translateY(-6px);
+        }
+
+
+        .caja-tecnologias {
+            display: flex;
+            gap: 10px;
+        }
+
+        .caja-tecnologias .html {
+            background-color: #e34c26;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .css {
+            background-color: #264de4;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .javaScript {
+            background-color: #f0db4f;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .react {
+            background-color: #61dafb;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .node {
+            background-color: #68a063;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .tailwind {
+            background-color: #38bdf8;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-Demos-GitHub {
+            padding: 5px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            align-items: center;
+            border-top: 1px solid black;
+        }
+
+        .demos,
+        .github {
+            width: auto;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: 1px solid var(--color-nav);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .demos:hover {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+        }
+
+        .github:hover {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+        }
+
+        .project-status {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-top: 5px;
+        }
+
+        .completado {
+            background-color: green;
+        }
+
+        .progreso {
+            background-color: orange;
+        }
+
+        .planeado {
+            background-color: gray;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .project-cards-list {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .project-card-list {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid var(--color-nav);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--color-text-dark);
+        }
+
+        .project-card-list,
+        .project-title,
+        .project-description,
+        .caja-tecnologias,
+        .caja-Demos-GitHub {
+            padding: 15px;
+        }
+
+        .caja-tecnologias {
+            display: flex;
+            gap: 10px;
+        }
+
+        .caja-tecnologias .html {
+            background-color: #e34c26;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .css {
+            background-color: #264de4;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .javaScript {
+            background-color: #f0db4f;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .react {
+            background-color: #61dafb;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .node {
+            background-color: #68a063;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-tecnologias .tailwind {
+            background-color: #38bdf8;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .caja-Demos-GitHub {
+            padding: 5px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            align-items: center;
+            background-color: yellow;
+        }
+
+        .demos,
+        .github {
+            width: auto;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: 1px solid var(--color-nav);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .demos:hover {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+        }
+
+        .github:hover {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+        }
+
+        .project-status {
+            border-radius: 50px;
+        }
+
+        .completado {
+            background-color: green;
+            width: 15px;
+            height: 15px;
+        }
+
+        .progreso {
+            background-color: orange;
+            width: 15px;
+            height: 15px;
+        }
+
+        .planeado {
+            background-color: gray;
+            width: 15px;
+            height: 15px;
+        }

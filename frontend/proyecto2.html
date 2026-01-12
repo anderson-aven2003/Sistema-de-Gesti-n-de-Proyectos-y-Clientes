@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #f4f6f8;
+            --color-nav: #1f2937;
+            --color-aside: #e5e7eb;
+            --color-main: #ffffff;
+            --color-card: #f9fafb;
+
+            --color-text-light: #ffffff;
+            --color-text-dark: #111827;
+            --color-accent: #3b82f6;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        #container-project-list {
+            width: 100%;
+            min-height: 100vh;
+            gap: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 40px;
+            align-items: center;
+        }
+
+        .nav-project{
+            width: 100%;
+            height: 40px;
+            border-top: 2px solid var(--color-nav);
+            border-bottom: 2px solid var(--color-nav);
+        }
+
+        .nav-ul-project{
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .li-project{
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .li-project a{
+            text-decoration: none;
+            color: black;
+        }
+
+        caption {
+            caption-side: top;
+            text-align: left;
+            font-weight: 600;
+            padding: 10px 0;
+            color: var(--color-text-dark);
+        }
+
+
+        .title-project {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px var(--color-shadow);
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover .name-project {
+            color: var(--color-accent);
+        }
+
+
+        tbody tr:hover {
+            background-color: rgba(59, 130, 246, 0.08);
+        }
+
+
+        td,
+        th {
+            border: 1px solid var(--color-nav);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        .name-project {
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .cajita-color {
+            width: 100%;
+            height: 10px;
+        }
+
+        .estado {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .estado-texto {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .estado-bar {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+        }
+
+
+        .progreso {
+            background-color: rgb(94, 255, 129);
+        }
+
+        .pendiente {
+            background-color: rgb(255, 230, 91);
+        }
+
+        .inactivos {
+            background-color: rgb(255, 102, 102);
+        }
+
+        .completado {
+            background-color: rgb(102, 255, 218);
+        }
+
+
+        @media (max-width: 768px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            tr,
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tbody tr {
+                border: 1px solid var(--color-nav);
+                border-radius: 12px;
+                margin-bottom: 20px;
+                padding: 15px;
+                background: var(--color-card);
+            }
+
+            td {
+                border: none;
+                padding: 8px 0;
+            }
+
+            td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                display: block;
+                margin-bottom: 4px;
+                color: var(--color-text-dark);
+            }
+
+            .estado {
+                margin-top: 6px;
+            }
+
+            .projects-nav {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-project-list">
+        <h3 class="title-project">Proyectos</h3>
+
+        <nav class="nav-project">
+            <ul class="nav-ul-project">
+                <li class="li-project"><a href="#">vista</a></li>
+                <li class="li-project"><a href="#">filtro</a></li>
+                <li class="li-project"><a href="#">busqueda</a></li>
+                <li class="li-project"><a href="#">ordenar</a></li>
+            </ul>
+        </nav>
+
+        <table id="table-project-list">
+                <caption>Listado de proyectos y su estado actual</caption>
+            <thead>
+                <tr>
+                    <th>Nombre del Proyecto</th>
+                    <th>Cliente</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Entrega</th>
+                    <th>tiempo restante</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Proyecto" class="name-project">Desarrollo Web</td>
+                    <td data-label="Cliente">Empresa A</td>
+                    <td data-label="Inicio"><time datetime="2024-01-15">15 Ene 2024</time></td>
+                    <td data-label="Entrega"><time datetime="2024-04-15">15 Abr 2024</time></td>
+                    <td data-label="Tiempo restante"> --- </td>
+                    <td data-label="Estado">
+                        <div class="estado">
+                            <span class="estado-texto">Completado</span>
+                            <span class="estado-bar completado"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Proyecto" class="name-project">Aplicación Móvil</td>
+                    <td data-label="Cliente">Empresa B</td>
+                    <td data-label="Inicio"><time datetime="2024-02-01">01 fer 2024</time></td>
+                    <td data-label="Entrega"><time datetime="2024-06-01">01 jun 2024</time></td>
+                    <td data-label="Tiempo restante">4 meses</td>
+                    <td data-label="Estado">
+                        <div class="estado">
+                            <span class="estado-texto">Pendiente</span>
+                            <span class="estado-bar pendiente"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Proyecto" class="name-project">Rediseño de Marca</td>
+                    <td data-label="Cliente">Empresa C</td>
+                    <td data-label="Inicio"><time datetime="2024-03-10">10 mar 2024</time></td>
+                    <td data-label="Entrega"><time datetime="2024-05-10">10 may 2024</time></td>
+                    <td data-label="Tiempo restante">2 meses</td>
+                    <td data-label="Estado">
+                        <div class="estado">
+                            <span class="estado-texto">En progreso</span>
+                            <span class="estado-bar progreso"></span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
